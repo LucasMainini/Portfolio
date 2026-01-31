@@ -2,6 +2,269 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;  /* aqui coloco uma rolagem suave no scroll */
+
+}
+
+:root {  /* aqui foi feito uma vareavel para colocar as cores */
+    --primaria: #4f46e5;
+    --secundaria: #7c3ead;
+    --escuro: #0f172a;
+    --maisEscuro: #0a0f1c;
+    --claro: #e2e8f0;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+body{
+    background-color: var(--escuro);
+    color: var(--claro);
+
+
+
+}
+
+.navegacao {
+    
+    position: fixed; /*deixa fixidado */
+    top: 0; /* deixa sempre no topo */
+    background-color: rgba(15, 23, 42, 0.8);
+    width: 100%; /*deixa na tela toda */
+    z-index: 100; /* deixa na frente de todo mundo da prioridade */   
+    padding: 1.5rem; /* espasamento interno pra nao ficar mt grudado */
+
+}
+.menu{
+    display: flex; /* Deixa um do lado do outro com o flex */
+    list-style: none;
+    gap: 3rem; /* da um espaçamento entre eles */
+    justify-content: center; /* joga tudo pro center */
+
+
+
+
+}
+
+
+
+.menu-link{
+    text-decoration: none;
+    color: var(--claro);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem;
+
+}
+    /* animaçao no nav */
+.menu-link::after{ 
+
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease; /* faz a transiçao em forma suave  */
+}
+.menu-link:hover::after{ /* HOVER FAZ COM QUE SO ACONTEÇA QUANDO TIVER COM MOUSE EM CIMA */
+    width: 100%;
+
+}
+
+.cabecalho{
+    min-height: 100vh; /* o minimo dele ocupa a tela toda */
+    display: flex; /* deixa tudo no meio */
+    justify-content: center;
+    align-items: center; /* as duas propriedades deixa tudo alinhado no centro */
+    flex-direction: column; /* direçao que os itens vao ficar */
+
+
+}
+
+.foto-perfil{
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    border-radius: 50%;
+    border: 4px solid var(--vidro);
+
+
+}  /* */
+
+h1 {
+
+    font-size: 3.5rem;
+    color: var(--primaria);
+    font-weight: bold;
+    margin: 20px;
+}
+.cab-sub-titulo{
+
+    font-size: 1.5rem;
+    color: var(--claro);
+}
+
+
+.sobre{
+    padding: 6rem 2rem;
+
+
+}
+
+.sobre-titulo{
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 20px;
+
+
+}
+.sobre-caixa{
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+
+
+}
+
+.sobre-paragrafo{
+    text-align: center;
+    font-size: 1.2rem;
     
 
+
+}
+
+.projetos{
+    padding: 6rem 2rem;
+
+}
+
+.projeto-imagem{
+height: 200px;
+width: 100%;
+object-fit: cover;  /* como ele vai se encaixar  */
+
+}
+
+.projetos-titulo{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+
+}
+.projetos-card:hover{
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03); /* faz a animaçao */
+    transition: all 0.5s ease; /* da um efeito na hora de colocar o mouse em cima */
+    cursor: pointer;
+
+
+}
+
+.projeto-caixa {
+    display: grid; /* organizar como caixa */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.projetos-card{
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--vidro);
+    overflow: hidden; /* caso fique muito grande o item ele esconde a sobre */
+
+}
+
+.info-projetos{
+    margin-bottom: 5px;
+
+}
+
+.paragrafo-projetos{
+color: rgba(226, 232, 240, 0.8);
+    line-height: 1.2rem; /* Altura da linha */
+
+
+}
+.caixa-textos{
+    padding: 1.5rem;
+
+}
+
+
+.contatos{
+    padding: 6rem 2rem;
+
+}
+
+#contatos-titulos{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.formulario-contato{
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+}
+
+.grupo-form{
+    margin-bottom: 1.5rem;
+
+}
+
+
+
+.campo-form{
+   
+     width: 100%;   
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px; /*deixa redondo*/
+    color: var(--claro);
+    border: 1px solid var(--vidro);
+    outline: none;
+
+}
+.campo-form:focus{ /* quando eu der foco nele ele fará alguma coisa */
+    border-color: var(--secundaria);
+    box-shadow: rgba(79, 70, 229, 0.3);
+
+}
+
+.botao-form{
+    color: var(--claro);
+    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5 ease;
+}
+.botao-form:hover{
+    transform: translateY(-4px);
+    box-shadow: rgba(79, 70, 229, 0.4);
+    
+    
 }

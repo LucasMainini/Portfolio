@@ -10,32 +10,32 @@
     <nav class="navegacao"> 
     <ul class="menu">
         <li>
-            <a href="#inicio">Início</a>
+            <a href="#inicio" class="menu-link">Início</a>
         </li>
         <li>
-            <a href="#sobre">Sobre</a>
+            <a href="#sobre" class="menu-link">Sobre</a>
         </li>
         <li>
-            <a href="projetos">Projetos</a>
+            <a href="projetos" class="menu-link">Projetos</a>
         </li>
         <li>
-            <a href="contato">Contato</a>
+            <a href="contato" class="menu-link">Contato</a>
         </li>
     </ul>
         
     </nav>
 
     <main id="inicio" class="cabecalho">
-        <div>
+       
             <img src="img/Foto.png" alt="foto de lucas" class="foto-perfil">
             <h1>Lucas Mainini Pinheiro</h1>
-            <p>Desenvolvedor Front End</p> 
-        </div>
+            <p class="cab-sub-titulo">Desenvolvedor Front End</p> 
+        
 
     </main>
 
     <section id="sobre" class="sobre">
-        <h2 class="sobre titulo">Sobre mim</h2>
+        <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-caixa">
             <p class="sobre-paragrafo">
             Olá, sou Lucas, tenho 20 anos e curso Análise e Desenvolvimento de Sistemas pela Unicesumar, em Curitiba. Atualmente no segundo ano da graduação, atuo profissionalmente na PROTEGE e estou em constante desenvolvimento no universo da programação, com foco em Front-End. Busco transformar ideias em interfaces intuitivas, funcionais e visualmente eficientes, unindo tecnologia, organização e aprendizado contínuo.</div>
@@ -48,10 +48,31 @@
             <div class="projeto-caixa">
                 <div class="projetos-card">
                     <img src="img/poke.png" alt="Projeto1" class="projeto-imagem">
+                    <div class="caixa-textos">
                     <h3 class="info-projetos">Site Pokemon Fire Red</h3>
                     <p class="paragrafo-projetos">Este foi meu primeiro projeto na faculdade: um site desenvolvido no início da minha jornada na programação, onde transformei a nostalgia do meu jogo favorito da infância em uma experiência digital. Mais do que um trabalho acadêmico, esse projeto representa meu primeiro contato prático com desenvolvimento web e o ponto de partida da minha evolução no Front-End.</p>
+                    </div>
                 </div>
             </div>
         </section>
+        
+        <section id="contatos" class="contatos">
+    <h2 id="contatos-titulos">Entre Em Contato</h2>
+
+    <form class="formulario-contato" id="formulario">
+        <div class="grupo-form">
+           <input placeholder="Nome" class="campo-form">
+        </div>
+
+        <div class="grupo-form">
+            <textarea class="campo-form" name="mensagem" placeholder="Digite sua Mensagem"></textarea>
+                
+    
+        </div>
+
+        <button type="submit" class="botao-form">Enviar WhatsAapp</button>
+    </form>
+</section>
+
 </body>
 </html>
